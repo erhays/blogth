@@ -1,0 +1,117 @@
+
+/* defaults */
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+    }
+
+    ol, ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+/* type & rhythm */
+
+    html, body {
+      font: 15px/2 'Helvetica';
+    }
+
+    h1 {
+      font-size: 5.60rem;
+      line-height: 1.07rem;
+      padding-top: 0.548rem;
+      margin-bottom: 0.167rem;
+    }
+
+    h2 {
+      font-size: 3.13rem;
+      line-height: 1.28rem;
+      padding-top: 0.936rem;
+      margin-bottom: 0.340rem;
+    }
+
+    h3 {
+      font-size: 1.80rem;
+      line-height: 1.11rem;
+      padding-top: 1.33rem;
+      margin-bottom: 0.889rem;
+    }
+
+    h4 {
+      font-size: 1.80rem;
+      line-height: 1.11rem;
+      padding-top: 1.33rem;
+      margin-bottom: 0.889rem;
+    }
+
+    p {
+      font-size: 1.00rem;
+      line-height: 2.00rem;
+      padding-top: 0.667rem;
+      margin-bottom: 1.33rem;
+    }
+
+/* general layout */
+
+    body {
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .feed {
+      max-width: 1040px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* ++ MOBILE FIRST LAYOUT STYLES GO HERE */
+
+    .layout {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      margin: auto;
+    }
+
+    @media (min-width: 850px) {
+      .layout {
+        column-count: 2;
+        column-gap: 20px;
+      }
+    }
+    @media (max-width: 850px) and (min-width: 500px) {
+      main.layout {
+        max-width: 850px;
+        column-count: 1;
+        column-gap: initial;
+      }
+    }
+
+  .post {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .layout .post {
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
